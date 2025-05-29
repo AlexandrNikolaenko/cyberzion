@@ -1,11 +1,7 @@
-'use server'
+"use server";
 
-import Link from "next/link"
+import Link from "next/link";
 
-export default async function Footer(){
-  return (
-    <footer>
-
-    </footer>
-  )
+export default async function Footer() {
+  return <footer></footer>;
 }

@@ -3,12 +3,13 @@ button {
   color: var(--white);
 }
 
-.small-border-button, .border-button {
+.small-border-button,
+.border-button {
   position: relative;
   padding: 10px 30px;
   overflow: hidden;
-  background: #0A0A0A;
-  border-radius: 9999px;  
+  background: #0a0a0a;
+  border-radius: 9999px;
   color: var(--white);
   z-index: 1;
   font-size: 14px;
@@ -23,15 +24,15 @@ button {
     right: 1;
     bottom: 1;
     padding: 1px;
-    background: linear-gradient(343deg, #292929 70%, #0B0B0B 110%);
+    background: linear-gradient(343deg, #292929 70%, #0b0b0b 110%);
     border-radius: 9999px;
     z-index: -1;
 
-    -webkit-mask: 
-      linear-gradient(#fff 1 1) content-box, 
+    -webkit-mask:
+      linear-gradient(#fff 1 1) content-box,
       linear-gradient(#fff 1 1);
-    mask: 
-      linear-gradient(#fff 1 1) content-box, 
+    mask:
+      linear-gradient(#fff 1 1) content-box,
       linear-gradient(#fff 1 1);
     -webkit-mask-composite: xor;
     mask-composite: exclude;

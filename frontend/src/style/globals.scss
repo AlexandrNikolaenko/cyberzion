@@ -1,14 +1,14 @@
 @import "tailwindcss";
-@import './buttons.scss';
+@import "./buttons.scss";
 
 :root {
   --background: #000000;
   --background-light: #080808;
-  --accent: #346DFF;
-  --success: #4AC73F;
-  --error: #F24E1E;
-  --yellow: #DDFF05;
-  --white: #FFFFFF;
+  --accent: #346dff;
+  --success: #4ac73f;
+  --error: #f24e1e;
+  --yellow: #ddff05;
+  --white: #ffffff;
 }
 
 @theme inline {
@@ -17,7 +17,7 @@
   --color-accent: var(--accent);
   --color-success: var(--success);
   --color-error: var(--error);
-  --color-yellow: var(--yellow); 
+  --color-yellow: var(--yellow);
   --color-white: var(--white);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-inter);
@@ -71,7 +71,7 @@ header {
     align-items: center;
     padding: 12px 30px;
     border-radius: 10px;
-    background-color: #1A1A1A;
+    background-color: #1a1a1a;
     gap: 29px;
     color: var(--white);
   }
@@ -87,7 +87,9 @@ header {
       color: var(--white);
       gap: 8;
 
-      &:hover, &:active, &:focus {
+      &:hover,
+      &:active,
+      &:focus {
         color: var(--accent);
       }
 
@@ -143,7 +145,7 @@ header {
       padding: 0 50px;
       cursor: pointer;
       transform: scale(1);
-      transition: .3s transform;
+      transition: 0.3s transform;
 
       &::after {
         content: "";
@@ -154,10 +156,11 @@ header {
         height: 100%;
         background-color: var(--background-light);
         opacity: 50%;
-        transition: .3s opacity;
+        transition: 0.3s opacity;
       }
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         transform: scale(1.04);
 
         &::after {
@@ -168,15 +171,15 @@ header {
   }
 }
 
-@keyframes slide{
-  0%{
+@keyframes slide {
+  0% {
     transform: translateX(0);
   }
-  100%{
+  100% {
     transform: translateX(-50%);
   }
 }
- 
+
 // стилизация секции услуг
 
 #services {
@@ -221,15 +224,15 @@ header {
           align-items: center;
           height: 100%;
           cursor: pointer;
-          transition: .3s all;
+          transition: 0.3s all;
           border-radius: 20px;
-          
+
           div {
             display: flex;
             flex-direction: column;
             gap: 8px;
             width: 100%;
-            transition: .3s all;
+            transition: 0.3s all;
 
             p {
               color: var(--white);
@@ -239,10 +242,10 @@ header {
 
         .enable-service {
           background-color: #171717;
-          border: solid 1px #1E1E1E;
+          border: solid 1px #1e1e1e;
 
           h5 {
-            color: #9FBAFF;
+            color: #9fbaff;
           }
         }
 
@@ -255,11 +258,11 @@ header {
         }
 
         .disable-service:hover {
-          background-color: #0D0D0D;
+          background-color: #0d0d0d;
         }
       }
 
-      .card>div{
+      .card > div {
         display: flex;
         flex-direction: column;
         gap: 0;
@@ -289,7 +292,7 @@ header {
   height: 100%;
   border-radius: 20px;
   overflow: hidden;
-  background-color: #0E0E0E;
+  background-color: #0e0e0e;
   z-index: 1;
 
   &::before {
@@ -300,15 +303,15 @@ header {
     right: 0;
     bottom: 0;
     padding: 1.5px;
-    background: linear-gradient(343deg, #1A1A1A -50%, #1F1F1F 120%);
+    background: linear-gradient(343deg, #1a1a1a -50%, #1f1f1f 120%);
     border-radius: 20px;
     z-index: -1;
 
-    -webkit-mask: 
-      linear-gradient(#fff 1 1) content-box, 
+    -webkit-mask:
+      linear-gradient(#fff 1 1) content-box,
       linear-gradient(#fff 1 1);
-    mask: 
-      linear-gradient(#fff 1 1) content-box, 
+    mask:
+      linear-gradient(#fff 1 1) content-box,
       linear-gradient(#fff 1 1);
     -webkit-mask-composite: xor;
     mask-composite: exclude;

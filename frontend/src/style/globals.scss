@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./buttons.scss";
+@import "./effects.scss";
 
 :root {
   --background: #000000;
@@ -24,9 +25,8 @@
 }
 
 body {
-  background: var(--background);
+  background: var(--background-light);
   color: var(--foreground);
-  font-family: var(--font-inter);
 }
 
 ::-webkit-scrollbar {
@@ -44,6 +44,7 @@ main {
 }
 
 .logo {
+  display: block !important;
   width: 168px;
   aspect-ratio: 168/22;
   position: relative;
@@ -185,6 +186,7 @@ header {
 #services {
   position: relative;
   padding: 75px 0 198px 0;
+  background-color: var(--background);
 
   .wrapper {
     #title {
@@ -315,5 +317,309 @@ header {
       linear-gradient(#fff 1 1);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+  }
+}
+
+// стилизация секции почему мы
+
+#why {
+  padding: 75px 0;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 103px;
+
+    #why-title {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: start;
+
+      h2 {
+        color: var(--white);
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+    }
+
+    #why-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 27px;
+      column-gap: 24px;
+
+      .discr {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 130%;
+        color: #cdcdcd;
+      }
+
+      .card {
+        height: 438px;
+        padding: 40px 30px;
+
+        .fon {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+
+        .card-body {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          h3 {
+            font-size: 25px;
+            color: var(--white);
+            line-height: 100%;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+          }
+        }
+      }
+    }
+  }
+}
+
+// стилизация секции блога
+
+#blog {
+  padding: 50px 0;
+  background-color: var(--background);
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+
+    #blog-title {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 100px;
+
+      h2 {
+        color: var(--white);
+        font-size: 60px;
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #c3c3c3;
+      }
+    }
+
+    #blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 50px;
+
+      .card {
+        .blog-media {
+          position: relative;
+          width: 100%;
+          height: 204px;
+          border-radius: 0 0 20px 20px;
+          overflow: hidden;
+        }
+
+        .blog-body {
+          padding: 25px 20px 20px 20px;
+
+          .date {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            color: #8aa9f9;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 28px;
+          }
+
+          .title {
+            margin-bottom: 12px;
+            font-size: 25px;
+            font-weight: 400;
+            color: var(--white);
+            line-height: 100%;
+            letter-spacing: 0.05em;
+            max-width: 270px;
+          }
+
+          .desc {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 110%;
+            color: #a0a0a0;
+            margin-bottom: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#trigger {
+  display: flex;
+  flex-direction: column;
+  gap: 105px;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  background-color: #121212;
+  padding: 57px 0 64px 0;
+
+  .fon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  #trigger-title {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+
+    h2 {
+      font-size: 60px;
+      font-weight: 600;
+      color: var(--white);
+      max-width: 599px;
+      text-align: center;
+      line-height: 120%;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      max-width: 360px;
+      text-align: center;
+      line-height: 150%;
+      color: #c3c3c3;
+    }
+  }
+}
+
+// стилизация футера
+
+footer {
+  padding: 75px;
+  color: var(--white);
+
+  .wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 25px;
+
+    #base-footer-info {
+      grid-column: 1 / 4;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        color: #919191;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      #base-footer-info-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+
+        ul {
+          display: flex;
+
+          li {
+            padding: 8px;
+          }
+        }
+      }
+
+      #mailing-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+
+    #footer-services {
+      grid-column: 5 / 8;
+    }
+
+    #footer-company {
+      grid-column: 8 / 11;
+    }
+
+    #footer-contacts {
+      grid-column: 11 / 13;
+    }
+
+    .footer-col {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        color: #919191;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        li>a {
+          font-size: 14px;
+          line-height: 130%;
+        }
+      }
+    }
+
+    #lang-footer {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      gap: 17px;
+      color: var(--white);
+
+      &:first-child {
+        font-size: 14px;
+        line-height: 130%;
+
+        span {
+          color: #919191;
+          line-height: 110%;
+        }
+      }
+    }
   }
 }

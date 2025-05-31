@@ -19,10 +19,10 @@ button {
   &::before {
     content: "";
     position: absolute;
-    top: 1;
-    left: 1;
-    right: 1;
-    bottom: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     padding: 1px;
     background: linear-gradient(343deg, #292929 70%, #0b0b0b 110%);
     border-radius: 9999px;
@@ -41,12 +41,33 @@ button {
 
 .border-button {
   padding: 16.5px 30px;
-  font-weight: 400;
+  font-weight: 500;
+  width: max-content;
 }
 
 .accent-angle-button {
   background-color: var(--accent);
   padding: 0 20px;
+  font-weight: 400;
   border-radius: 100px 100px 0 100px;
   filter: drop-shadow(0 0 32px rgba(130, 143, 255, 0.25));
+}
+
+.accent-button {
+  background-color: var(--accent);
+  padding: 16px 20px;
+  letter-spacing: 0.02rem;
+  font-weight: 500;
+  border-radius: 100px;
+  filter: drop-shadow(0 0 32px rgba(130, 143, 255, 0.25));
+}
+
+.move-to-button {
+  background-color: #1c1c1c;
+  border-radius: 100px;
+  border: #262626 1px solid;
+  padding: 8px 10px 8px 18px;
+  display: flex;
+  gap: 13px;
+  color: var(--white);
 }

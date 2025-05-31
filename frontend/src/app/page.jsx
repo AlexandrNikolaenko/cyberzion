@@ -1,7 +1,12 @@
 "use client";
 
 import AccentPoint, { CardLabel } from "@/components/core/accent-point";
-import { AccentAngleButton, BorderButton } from "@/components/ui/button";
+import {
+  AccentAngleButton,
+  AccentButton,
+  BorderButton,
+  MoveToButton,
+} from "@/components/ui/button";
 import Card from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
@@ -51,6 +56,18 @@ export default function Home() {
 
   function handleChooseService(id) {
     setActiveService(id);
+  }
+
+  function handleAllBlog() {
+    return;
+  }
+
+  function handleDiscussProject() {
+    return;
+  }
+
+  function handleReadMore() {
+    return;
   }
 
   return (
@@ -251,6 +268,137 @@ export default function Home() {
             </Card>
           </div>
         </div>
+      </section>
+      <section id="why">
+        <div className="wrapper">
+          <div id="why-title">
+            <AccentPoint>Почему мы</AccentPoint>
+            <h2>Ключевые преимущества выбора нашей команды разработчиков</h2>
+          </div>
+          <div id="why-grid">
+            <Card>
+              <div className="fon"></div>
+              <div className="card-body justify-end">
+                <CardLabel icon={"/universal-icon.svg"}>
+                  Универсальность
+                </CardLabel>
+                <h3>
+                  Полный цикл разработки, <br /> от идеи до масштабирования
+                </h3>
+              </div>
+            </Card>
+            <div className="pt-[50px] discr max-w-[328px]">
+              Проектирование, дизайн, frontend/backend. Вам не нужно искать
+              отдельные команды — экономим ваше время и бюджет.
+            </div>
+            <Card>
+              <div className="fon"></div>
+              <div className="card-body justify-start">
+                <CardLabel icon={"/soft-icon.svg"}>Гибкость</CardLabel>
+                <h3>Гибкие решения под любые технологии</h3>
+                <div className="discr h-full flex flex-col justify-end">
+                  Блокчейн-интеграция и поддержка
+                </div>
+              </div>
+            </Card>
+            <div className="pt-[186px] discr max-w-[166px]">
+              Единый подрядчик для всех IT-задач.
+            </div>
+            <Card>
+              <div className="fon"></div>
+              <div className="card-body justify-start">
+                <CardLabel icon={"/result-icon.svg"}>
+                  Ориентация на результат
+                </CardLabel>
+                <h3>Гибкие решения под любые технологии</h3>
+                <div className="discr pt-[15px]">
+                  Увеличиваем прибыль с помощью автоматизации рутинных
+                  процессов, защит от взлома и интеграцию криптоплатежей
+                </div>
+              </div>
+            </Card>
+            <Card>
+              <div className="fon"></div>
+              <div className="card-body justify-start">
+                <h3>Фиксированные сроки и стоимость без скрытых платежей.</h3>
+                <CardLabel icon={"/trust-icon.svg"}>Доверие</CardLabel>
+                <div className="sub-card"></div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+      <section id="blog">
+        <div className="wrapper">
+          <div id="blog-title">
+            <AccentPoint>Блог</AccentPoint>
+            <h2>Здесь пишут разработчики</h2>
+            <p>Честно о технологиях без маркетинговой воды</p>
+          </div>
+          <div id="blog-grid">
+            <Card>
+              <div className="blog-media">
+                <Image alt="media" src={"/Blog1.png"} fill objectFit="cover" />
+              </div>
+              <div className="blog-body">
+                <div className="date">
+                  <div>Апрель, 2025</div>
+                  <div>6 мин</div>
+                </div>
+                <div className="title">Какое-то описание IT сферы</div>
+                <div className="desc">
+                  Какое-то описание заголовка нужно написать и не забыть...
+                </div>
+                <MoveToButton onClick={handleReadMore}>Читать</MoveToButton>
+              </div>
+            </Card>
+            <Card>
+              <div className="blog-media">
+                <Image alt="media" src={"/Blog2.png"} fill objectFit="cover" />
+              </div>
+              <div className="blog-body">
+                <div className="date">
+                  <div>Апрель, 2025</div>
+                  <div>6 мин</div>
+                </div>
+                <div className="title">Какое-то описание IT сферы</div>
+                <div className="desc">
+                  Какое-то описание заголовка нужно написать и не забыть...
+                </div>
+                <MoveToButton onClick={handleReadMore}>Читать</MoveToButton>
+              </div>
+            </Card>
+            <Card>
+              <div className="blog-media">
+                <Image alt="media" src={"/Blog3.png"} fill objectFit="cover" />
+              </div>
+              <div className="blog-body">
+                <div className="date">
+                  <div>Апрель, 2025</div>
+                  <div>6 мин</div>
+                </div>
+                <div className="title">Какое-то описание IT сферы</div>
+                <div className="desc">
+                  Какое-то описание заголовка нужно написать и не забыть...
+                </div>
+                <MoveToButton onClick={handleReadMore}>Читать</MoveToButton>
+              </div>
+            </Card>
+          </div>
+          <div className="flex justify-center w-full">
+            <AccentButton onClick={handleAllBlog}>Все статьи</AccentButton>
+          </div>
+        </div>
+      </section>
+      <section id="trigger">
+        <div className="fon"></div>
+        <div id="trigger-title">
+          <h2>Создаем магию разработки</h2>
+          <p>Расскажите нам о вашем проекте и мы дадим решение по реализации</p>
+        </div>
+        <AccentButton onClick={handleDiscussProject}>
+          Обсудить проект
+        </AccentButton>
       </section>
     </main>
   );

@@ -1,6 +1,26 @@
-.start {
-  filter: drop-shadow(0 0 27 var(--white));
+.star {
+  position: absolute;
+  filter: drop-shadow(0 0 1.5rem #FFFFFF);
 }
+
+.light {
+  position: absolute;
+
+  div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// .light {
+//   position: absolute;
+//   opacity: .2;
+//   background-image: linear-gradient(#00031B 130%, #F2F2F2 60%, #EAEAEA 40%, #000000 0%);
+//   backdrop-filter: blur(180px);
+//   background-color: #EAEAEA;
+//   // fill: linear-gradient(#00031B 130%, #F2F2F2 60%, #EAEAEA 40%, #000000 0%);
+// }
 
 // .star-radial {
   

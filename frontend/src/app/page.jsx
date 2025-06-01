@@ -1,6 +1,7 @@
 "use client";
 
 import AccentPoint, { CardLabel } from "@/components/core/accent-point";
+import { RadialStar, RhombusStar } from "@/components/effects/stars";
 import {
   AccentAngleButton,
   AccentButton,
@@ -73,6 +74,16 @@ export default function Home() {
   return (
     <main>
       <section id="intro">
+        <div className="absolute top-0 overflow-x-clip max-w-screen">
+          <div className="relative w-full">
+            <Image src={'/main-fon.png'} alt="fon" width={1645.42} height={677.55}/>
+          </div>
+        </div>
+        <div className="light rotate-[41.31deg] h-[290.29px] w-[871.27px] top-[138px] left-[-160px]">
+          <div>
+            <Image src={'/light.png'} fill alt="light"/>
+          </div>
+        </div>
         <div className="wrapper">
           <AccentPoint>IT-решения для бизнеса</AccentPoint>
           <h1 className="max-w-[552px] w-full font-[600] text-[80px] text-white leading-none mt-5 mb-[30px]">
@@ -99,10 +110,8 @@ export default function Home() {
               width={127}
               height={43}
             />
-          </li>
-          <li>
             <Image
-              src={"/Company1.svg"}
+              src={"/Company1-gray.svg"}
               alt="company"
               width={127}
               height={43}
@@ -115,10 +124,8 @@ export default function Home() {
               width={127}
               height={43}
             />
-          </li>
-          <li>
             <Image
-              src={"/Company1.svg"}
+              src={"/Company1-gray.svg"}
               alt="company"
               width={127}
               height={43}
@@ -131,10 +138,8 @@ export default function Home() {
               width={127}
               height={43}
             />
-          </li>
-          <li>
             <Image
-              src={"/Company1.svg"}
+              src={"/Company1-gray.svg"}
               alt="company"
               width={127}
               height={43}
@@ -147,10 +152,8 @@ export default function Home() {
               width={127}
               height={43}
             />
-          </li>
-          <li>
             <Image
-              src={"/Company1.svg"}
+              src={"/Company1-gray.svg"}
               alt="company"
               width={127}
               height={43}
@@ -163,10 +166,8 @@ export default function Home() {
               width={127}
               height={43}
             />
-          </li>
-          <li>
             <Image
-              src={"/Company1.svg"}
+              src={"/Company1-gray.svg"}
               alt="company"
               width={127}
               height={43}
@@ -179,10 +180,8 @@ export default function Home() {
               width={127}
               height={43}
             />
-          </li>
-          <li>
             <Image
-              src={"/Company1.svg"}
+              src={"/Company1-gray.svg"}
               alt="company"
               width={127}
               height={43}
@@ -195,10 +194,106 @@ export default function Home() {
               width={127}
               height={43}
             />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
           </li>
           <li>
             <Image
               src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
               alt="company"
               width={127}
               height={43}
@@ -206,7 +301,12 @@ export default function Home() {
           </li>
         </ul>
       </section>
-      <section id="services">
+      <section id="services" className="max-w-screen overflow-clip relative">
+        <div className="w-[398.65px] h-[458.54px] absolute top-[230px] right-[-194px] rotate-[-23.11deg]">
+          <div className="relative w-full h-full">
+            <Image src={'/light-ellips.png'} alt="fon" fill objectFit="cover"/>
+          </div>
+        </div>
         <div className="wrapper">
           <div id="title">
             <AccentPoint>Наши услуги</AccentPoint>
@@ -242,7 +342,12 @@ export default function Home() {
               ))}
             </ul>
             <Card>
-              <div>
+              <div className="services-image p-0 w-[467.1px] absolute right-[27px] bottom-[37.35px]">
+                <div className="relative w-full aspect-[467.1/376.69]">
+                  <Image alt="fon" src={'/fon-services.svg'} fill/>
+                </div>
+              </div>
+              <div className="services-info-card">
                 <CardLabel icon={"/code_xs.svg"}>Веб-разработка</CardLabel>
                 <h3>
                   Создаем как простые <br />
@@ -269,7 +374,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="why">
+      <section id="why" className="relative">
+        <div className="light rotate-[-31.04deg] top-[845px] left-[-223px] w-[723.89px] h-[441.19px]">
+          <div>
+            <Image src={'/light2.png'} fill alt="light"/>
+          </div>
+        </div>
         <div className="wrapper">
           <div id="why-title">
             <AccentPoint>Почему мы</AccentPoint>
@@ -277,7 +387,11 @@ export default function Home() {
           </div>
           <div id="why-grid">
             <Card>
-              <div className="fon"></div>
+              <div className="absolute top-[-40px] left-[-134px]">
+                <div className="w-[692px] h-[438px]">
+                  <Image src={'/why-fon-1.svg'} fill alt="fon"/>
+                </div>
+              </div>
               <div className="card-body justify-end">
                 <CardLabel icon={"/universal-icon.svg"}>
                   Универсальность
@@ -290,9 +404,14 @@ export default function Home() {
             <div className="pt-[50px] discr max-w-[328px]">
               Проектирование, дизайн, frontend/backend. Вам не нужно искать
               отдельные команды — экономим ваше время и бюджет.
+              <RadialStar id={'why2star'} size={30}/>
             </div>
             <Card>
-              <div className="fon"></div>
+              <div className="absolute top-[160px] left-[74px]">
+                <div className="w-[208px] h-[222px]">
+                  <Image src={'/why-fon-2.svg'} fill alt="fon"/>
+                </div>
+              </div>
               <div className="card-body justify-start">
                 <CardLabel icon={"/soft-icon.svg"}>Гибкость</CardLabel>
                 <h3>Гибкие решения под любые технологии</h3>
@@ -303,9 +422,15 @@ export default function Home() {
             </Card>
             <div className="pt-[186px] discr max-w-[166px]">
               Единый подрядчик для всех IT-задач.
+              <RhombusStar id={'why1star'} size={12.16}/>
+              <RhombusStar id={'why3star'} size={5.33} />
             </div>
             <Card>
-              <div className="fon"></div>
+              <div className="absolute top-[223px] left-[0]">
+                <div className="w-[374.5px] h-[308px]">
+                  <Image src={'/why-fon-3.svg'} fill alt="fon"/>
+                </div>
+              </div>
               <div className="card-body justify-start">
                 <CardLabel icon={"/result-icon.svg"}>
                   Ориентация на результат
@@ -318,7 +443,11 @@ export default function Home() {
               </div>
             </Card>
             <Card>
-              <div className="fon"></div>
+              <div className="absolute top-[170px] left-[-10.5px]">
+                <div className="w-[390px] h-[254px]">
+                  <Image src={'/why-fon-4.svg'} fill alt="fon"/>
+                </div>
+              </div>
               <div className="card-body justify-start">
                 <h3>Фиксированные сроки и стоимость без скрытых платежей.</h3>
                 <CardLabel icon={"/trust-icon.svg"}>Доверие</CardLabel>
@@ -391,7 +520,16 @@ export default function Home() {
         </div>
       </section>
       <section id="trigger">
-        <div className="fon"></div>
+        <div className="fon">
+          <RadialStar id={'trigger-1'} size={1}/>
+          <RadialStar id={'trigger-2'} size={3}/>
+          <RhombusStar id={'trigger-3'} size={5.33}/>
+          <RhombusStar id={'trigger-4'} size={7.86}/>
+          <RhombusStar id={'trigger-5'} size={7.86}/>
+          <svg height="220" width="500" xmlns="http://www.w3.org/2000/svg">
+            <polygon />
+          </svg>
+        </div>
         <div id="trigger-title">
           <h2>Создаем магию разработки</h2>
           <p>Расскажите нам о вашем проекте и мы дадим решение по реализации</p>

@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-export function RadialStar({size}) {
+export function RadialStar({size, id}) {
   return (
-    <Image width={size} height={size} alt="star" src={'/Radial-star.svg'}/>
+    <Image className="star" width={size} id={id} height={size} alt="star" src={'/Radial-star.svg'}/>
   )
 }
 
-export function RhombusStar({size}) {
+export function RhombusStar({size, id}) {
   return (
-    <Image width={size} height={size} alt="star" src={'/Rhombus-star.svg'}/>
+    <Image className="star" width={size} id={id} height={size} alt="star" src={'/Rhombus-star.svg'}/>
   )
 }

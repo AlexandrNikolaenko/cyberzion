@@ -4,5 +4,7 @@ networks:
 services:
   frontend:
     build: .
+    ports:
+      - "80:80"
     networks:
       - prod

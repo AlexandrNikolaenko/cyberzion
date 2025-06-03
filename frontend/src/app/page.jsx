@@ -77,6 +77,12 @@ export default function Home() {
         <div className="absolute top-0 overflow-x-clip max-w-screen">
           <div className="relative w-full">
             <Image src={'/main-fon.png'} alt="fon" width={1645.42} height={677.55}/>
+            
+          </div>
+        </div>
+        <div className="absolute top-[105px] right-[59px]">
+          <div className="relative w-[699px] h-[595px]">
+            <Image src={'/main-fon-motion.svg'} alt="fon" fill/>
           </div>
         </div>
         <div className="light rotate-[41.31deg] h-[290.29px] w-[871.27px] top-[138px] left-[-160px]">
@@ -519,16 +525,18 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="trigger">
+      <section id="trigger" className="overflow-clip">
         <div className="fon">
           <RadialStar id={'trigger-1'} size={1}/>
           <RadialStar id={'trigger-2'} size={3}/>
           <RhombusStar id={'trigger-3'} size={5.33}/>
           <RhombusStar id={'trigger-4'} size={7.86}/>
           <RhombusStar id={'trigger-5'} size={7.86}/>
-          <svg height="220" width="500" xmlns="http://www.w3.org/2000/svg">
-            <polygon />
-          </svg>
+          <div className="absolute top-[130px] left-[50%] translate-x-[-50%] z-[0]">
+            <div className="relative w-[2022px] h-[596px]">
+              <Image src={'/trigger-section-fon.svg'} fill alt="fon"/>
+            </div>
+          </div>
         </div>
         <div id="trigger-title">
           <h2>Создаем магию разработки</h2>

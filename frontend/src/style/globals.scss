@@ -237,6 +237,49 @@ header {
   padding-top: 97px;
   padding-bottom: 92px;
   background-color: var(--background-light);
+
+  .contrast-label {
+    position: absolute;
+    text-align: center;
+    color: var(--background);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .02rem;
+    line-height: 110%;
+    padding: 6px 15px;
+
+    &.yellow {
+      background-color: var(--yellow);
+    }
+
+    &.error {
+      background-color: var(--error);
+    }
+
+    &.success {
+      background-color: var(--success);
+    }
+
+    &.accent {
+      background-color: var(--accent);
+    }
+
+    &.rt {
+      border-radius: 20px 3px 13px 20px;
+    }
+    
+    &.rb {
+      border-radius: 20px 13px 3px 20px;
+    }
+
+    &.lt {
+      border-radius: 3px 20px 20px 13px;
+    }
+
+    &.lb {
+      border-radius: 13px 20px 20px 3px;
+    }
+  }
 }
 
 // стилизация ленты скролла
@@ -265,30 +308,16 @@ header {
       transform: scale(1);
       transition: 0.3s transform;
 
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   top: 0;
-      //   left: 0;
-      //   width: 100%;
-      //   height: 100%;
-      //   background-color: var(--background-light);
-      //   opacity: 50%;
-      //   transition: 0.3s all;
-      // }
-
       img {
         transition: all .3s;
       }
 
       img:first-child {
         opacity: 0;
-        // position: absolute;
       }
 
       img:last-child {
         transform: translateY(-100%);
-        // position: absolute;
       }
 
       &:hover,

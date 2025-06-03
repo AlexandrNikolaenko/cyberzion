@@ -2,6 +2,7 @@
 
 import AccentPoint, { CardLabel } from "@/components/core/accent-point";
 import { RadialStar, RhombusStar } from "@/components/effects/stars";
+import BackImage from "@/components/ui/background-images";
 import {
   AccentAngleButton,
   AccentButton,
@@ -9,9 +10,69 @@ import {
   MoveToButton,
 } from "@/components/ui/button";
 import Card from "@/components/ui/card";
+import ContarstLabel from "@/components/ui/contrast-labels";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+
+const labels = [
+  {
+    id: 0,
+    color: 'yellow',
+    text: 'Разработка',
+    anglePosition: 'lb',
+    position: {top: 144.5, left: 75.5},
+    rotation: -90
+  },
+  {
+    id: 1,
+    color: 'accent',
+    text: 'Автоматизация',
+    anglePosition: 'lt',
+    position: {top: 91, left: 553},
+    rotation: 0
+  },
+  {
+    id: 2,
+    color: 'error',
+    text: 'Дизайн',
+    anglePosition: 'rt',
+    position: {top: 86, left: 206},
+    rotation: 0
+  },
+  {
+    id: 3,
+    color: 'error',
+    text: 'Боты',
+    anglePosition: 'rt',
+    position: {top: 224, left: 647},
+    rotation: -90
+  },
+  {
+    id: 4,
+    color: 'success',
+    text: 'Токены',
+    anglePosition: 'lb',
+    position: {top: 425, left: 294},
+    rotation: 0
+  },
+  {
+    id: 5,
+    color: 'success',
+    text: 'blockchain',
+    anglePosition: 'rt',
+    position: {top: 485, left: 325},
+    rotation: 0
+  },
+  {
+    id: 6,
+    color: 'success',
+    text: 'Смарт контракты',
+    anglePosition: 'lt',
+    position: {top: 349, left: 548},
+    rotation: 0
+  },
+]
 
 const services = [
   {
@@ -77,12 +138,80 @@ export default function Home() {
         <div className="absolute top-0 overflow-x-clip max-w-screen">
           <div className="relative w-full">
             <Image src={'/main-fon.png'} alt="fon" width={1645.42} height={677.55}/>
-            
           </div>
         </div>
         <div className="absolute top-[105px] right-[59px]">
           <div className="relative w-[699px] h-[595px]">
-            <Image src={'/main-fon-motion.svg'} alt="fon" fill/>
+            {/* <Image src={'/main-fon-motion.svg'} alt="fon" fill/> */}
+
+            {/* сетка */}
+
+            <div className={`absolute top-0 right-0 w-[661px] h-[595px]`}>
+              <div className={`relative w-full h-full`}>
+                <Image src={'/main-fon-grid.svg'} alt="fon" fill/>
+              </div>
+            </div>
+
+            {/* лэйблы */}
+
+            {/* <Image src={'/main-fon-grid.svg'} alt="fon" fill/> */}
+            <div className={`absolute top-[188px] right-[266px] w-[174px] h-[174px]`}>
+              <div className={`relative w-full h-full`}>
+                <Image src={'/central-image.svg'} fill alt="img"/>
+              </div>
+            </div>
+            {/* <BackImage image={'/central-image.svg'} size={{x: 174, y: 174}} position={{top: 188, left: 266}}/> */}
+            <div className={`absolute top-[250px] right-[481px] w-[168px] h-[126px]`}>
+              <div className={`relative w-full h-full`}>
+                <Image src={'/code-image.svg'} fill alt="img"/>
+              </div>
+            </div>
+            {/* <BackImage image={'/code-image.svg'} size={{x: 168, y: 126}} position={{top: 250, left: 481}}/> */}
+            <div className={`absolute top-[41px] right-[225px] w-[170px] h-[103px]`}>
+              <div className={`relative w-full h-full`}>
+                <Image src={'/pen-image.svg'} fill alt="img"/>
+              </div>
+            </div>
+            {/* <BackImage image={'/pen-image.svg'} size={{x: 170, y: 103}} position={{top: 41, left: 225}}/> */}
+            <div className={`absolute top-[144px] right-[63px] w-[162px] h-[136px]`}>
+              <div className={`relative w-full h-full`}>
+                <Image src={'/bot-image.svg'} fill alt="img"/>
+              </div>
+            </div>
+            {/* <BackImage image={'/bot-image.svg'} size={{x: 162, y: 136}} position={{top: 144, left: 63}}/> */}
+            <div className={`absolute top-[404px] right-[35px] w-[192px] h-[136px]`}>
+              <div className={`relative w-full h-full`}>
+                <Image src={'/doc-image.svg'} fill alt="img"/>
+              </div>
+            </div>
+            {/* <BackImage image={'/doc-image.svg'} size={{x: 192, y: 136}} position={{top: 404, left: 35}}/> */}
+            <div className={`absolute top-[410px] right-[431px] w-[122px] h-[122px]`}>
+              <div className={`relative w-full h-full`}>
+                <Image src={'/api-image.svg'} fill alt="img"/>
+              </div>
+            </div>
+            {/* <BackImage image={'/api-image.svg'} size={{x: 122, y: 122}} position={{top: 410, left: 431}}/> */}
+            <div className={`absolute top-[410px] right-[577px] w-[122px] h-[122px]`}>
+              <div className={`relative w-full h-full`}>
+                <Image src={'/nft-image.svg'} fill alt="img"/>
+              </div>
+            </div>
+            {/* <BackImage image={'/nft-image.svg'} size={{x: 122, y: 122}} position={{top: 410, left: 577}}/> */}
+
+            {/* тексты */}
+
+            {
+              labels.map(label => (
+                <div key={label.id} style={{top: `${label.position.top}px`, left: `${label.position.left}px`, transform: `rotate(${label.rotation}deg)`}} className={`contrast-label ${label.anglePosition} ${label.color}`}>
+                  {label.text}
+                </div>
+                // <ContarstLabel {...label}>{label.text}</ContarstLabel>
+              ))
+            }
+
+            {/* звездочки */}
+
+
           </div>
         </div>
         <div className="light rotate-[41.31deg] h-[290.29px] w-[871.27px] top-[138px] left-[-160px]">

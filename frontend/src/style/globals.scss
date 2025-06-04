@@ -204,11 +204,29 @@ header {
       align-items: center;
       color: var(--white);
       gap: 8;
+      transition: all .1s;
+
+      #header-lang-active-icon {
+        opacity: 0;
+        transition: all .1s;
+      }
+
+      #header-lang-icon {
+        transition: all .1s;
+      }
 
       &:hover,
       &:active,
       &:focus {
         color: var(--accent);
+
+        #header-lang-active-icon {
+          opacity: 1;
+        }
+
+        #header-lang-icon {
+          opacity: 0;
+        }
       }
 
       div {

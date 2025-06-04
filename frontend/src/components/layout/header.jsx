@@ -45,13 +45,26 @@ export default function Header() {
               Связаться
             </SmallBorderButton>
             <button className="languages">
-              <Image
-                src={"/languages.svg"}
-                width={30}
-                height={30}
-                alt="lang"
-                style={{ color: "inherit" }}
-              />
+              <div className="realtive w-[30px] h-[30px]">
+                <div className="absolute">
+                  <Image
+                    src={"/languages.svg"}
+                    width={30}
+                    height={30}
+                    alt="lang"
+                    id="header-lang-icon"
+                  />
+                </div>
+                <div className="absolute">
+                  <Image
+                    src={"/languages-active.svg"}
+                    width={30}
+                    height={30}
+                    alt="lang"
+                    id="header-lang-active-icon"
+                  />
+                </div>
+              </div>
               <div>
                 <span>Language</span>
                 <span>{language}</span>

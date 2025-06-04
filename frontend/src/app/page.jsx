@@ -113,8 +113,47 @@ const services = [
   },
 ];
 
+const startMotionPosition = [
+  {
+    id: 0,
+    left: 139,
+    top: 73,
+  },
+  {
+    id: 1,
+    left: 276,
+    top: 73,
+  },
+  {
+    id: 2,
+    left: 531,
+    top: 73,
+  },
+  {
+    id: 3,
+    left: 139,
+    top: 211,
+  },
+  { 
+    id: 4,
+    left: 531,
+    top: 331.63,
+  },
+  {
+    id: 5,
+    left: 447,
+    top: 462.63,
+  },
+  {
+    id: 6,
+    left: 276,
+    top: 462.63,
+  },
+]
+
 export default function Home() {
   const [activeService, setActiveService] = useState(0);
+  const [starsPosition, setStarsPosition] = useState(startMotionPosition);
 
   function handleChooseService(id) {
     setActiveService(id);
@@ -148,9 +187,21 @@ export default function Home() {
 
             <div className={`absolute top-0 right-0 w-[661px] h-[595px]`}>
               <div className={`relative w-full h-full`}>
-                <Image src={'/main-fon-grid.svg'} alt="fon" fill/>
+                <Image src={'/main-fon-grid.svg'} alt="fon" fill objectFit="contain"/>
               </div>
             </div>
+
+            {/* звездочки */}
+
+            {
+              starsPosition.map(star => (
+                <div className="absolute w-[7.86px] rotate-[-45deg]" key={star.id} style={{top: star.top + 'px', left: star.left + 'px'}}>
+                  <div className="fon-star realtive">
+                    <RhombusStar id={star.id} size={7.86}/>
+                  </div>
+                </div>
+              ))
+            }
 
             {/* лэйблы */}
 
@@ -208,10 +259,6 @@ export default function Home() {
                 // <ContarstLabel {...label}>{label.text}</ContarstLabel>
               ))
             }
-
-            {/* звездочки */}
-
-
           </div>
         </div>
         <div className="light rotate-[41.31deg] h-[290.29px] w-[871.27px] top-[138px] left-[-160px]">

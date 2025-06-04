@@ -18,61 +18,61 @@ import { useState } from "react";
 const labels = [
   {
     id: 0,
-    color: 'yellow',
-    text: 'Разработка',
-    anglePosition: 'lb',
-    position: {top: 144.5, left: 75.5},
-    rotation: -90
+    color: "yellow",
+    text: "Разработка",
+    anglePosition: "lb",
+    position: { top: 144.5, left: 75.5 },
+    rotation: -90,
   },
   {
     id: 1,
-    color: 'accent',
-    text: 'Автоматизация',
-    anglePosition: 'lt',
-    position: {top: 91, left: 553},
-    rotation: 0
+    color: "accent",
+    text: "Автоматизация",
+    anglePosition: "lt",
+    position: { top: 91, left: 553 },
+    rotation: 0,
   },
   {
     id: 2,
-    color: 'error',
-    text: 'Дизайн',
-    anglePosition: 'rt',
-    position: {top: 86, left: 206},
-    rotation: 0
+    color: "error",
+    text: "Дизайн",
+    anglePosition: "rt",
+    position: { top: 86, left: 206 },
+    rotation: 0,
   },
   {
     id: 3,
-    color: 'error',
-    text: 'Боты',
-    anglePosition: 'rt',
-    position: {top: 224, left: 647},
-    rotation: -90
+    color: "error",
+    text: "Боты",
+    anglePosition: "rt",
+    position: { top: 224, left: 647 },
+    rotation: -90,
   },
   {
     id: 4,
-    color: 'success',
-    text: 'Токены',
-    anglePosition: 'lb',
-    position: {top: 425, left: 294},
-    rotation: 0
+    color: "success",
+    text: "Токены",
+    anglePosition: "lb",
+    position: { top: 425, left: 294 },
+    rotation: 0,
   },
   {
     id: 5,
-    color: 'success',
-    text: 'blockchain',
-    anglePosition: 'rt',
-    position: {top: 485, left: 325},
-    rotation: 0
+    color: "success",
+    text: "blockchain",
+    anglePosition: "rt",
+    position: { top: 485, left: 325 },
+    rotation: 0,
   },
   {
     id: 6,
-    color: 'success',
-    text: 'Смарт контракты',
-    anglePosition: 'lt',
-    position: {top: 349, left: 548},
-    rotation: 0
+    color: "success",
+    text: "Смарт контракты",
+    anglePosition: "lt",
+    position: { top: 349, left: 548 },
+    rotation: 0,
   },
-]
+];
 
 const services = [
   {
@@ -134,7 +134,7 @@ const startMotionPosition = [
     left: 139,
     top: 211,
   },
-  { 
+  {
     id: 4,
     left: 531,
     top: 331.63,
@@ -149,7 +149,7 @@ const startMotionPosition = [
     left: 276,
     top: 462.63,
   },
-]
+];
 
 export default function Home() {
   const [activeService, setActiveService] = useState(0);
@@ -176,7 +176,12 @@ export default function Home() {
       <section id="intro">
         <div className="absolute top-0 overflow-x-clip max-w-screen">
           <div className="relative w-full">
-            <Image src={'/main-fon.png'} alt="fon" width={1645.42} height={677.55}/>
+            <Image
+              src={"/main-fon.png"}
+              alt="fon"
+              width={1645.42}
+              height={677.55}
+            />
           </div>
         </div>
         <div className="absolute top-[105px] right-[59px]">
@@ -187,83 +192,110 @@ export default function Home() {
 
             <div className={`absolute top-0 right-0 w-[661px] h-[595px]`}>
               <div className={`relative w-full h-full`}>
-                <Image src={'/main-fon-grid.svg'} alt="fon" fill objectFit="contain"/>
+                <Image
+                  src={"/main-fon-grid.svg"}
+                  alt="fon"
+                  fill
+                  objectFit="contain"
+                />
               </div>
             </div>
 
             {/* звездочки */}
 
-            {
-              starsPosition.map(star => (
-                <div className="absolute w-[7.86px] rotate-[-45deg]" key={star.id} style={{top: star.top + 'px', left: star.left + 'px'}}>
-                  <div className="fon-star realtive">
-                    <RhombusStar id={star.id} size={7.86}/>
-                  </div>
+            {starsPosition.map((star) => (
+              <div
+                className="absolute w-[7.86px] rotate-[-45deg]"
+                key={star.id}
+                style={{ top: star.top + "px", left: star.left + "px" }}
+              >
+                <div className="fon-star realtive">
+                  <RhombusStar id={star.id} size={7.86} />
                 </div>
-              ))
-            }
+              </div>
+            ))}
 
             {/* лэйблы */}
 
             {/* <Image src={'/main-fon-grid.svg'} alt="fon" fill/> */}
-            <div className={`absolute top-[188px] right-[266px] w-[174px] h-[174px]`}>
+            <div
+              className={`absolute top-[188px] right-[266px] w-[174px] h-[174px]`}
+            >
               <div className={`relative w-full h-full`}>
-                <Image src={'/central-image.svg'} fill alt="img"/>
+                <Image src={"/central-image.svg"} fill alt="img" />
               </div>
             </div>
             {/* <BackImage image={'/central-image.svg'} size={{x: 174, y: 174}} position={{top: 188, left: 266}}/> */}
-            <div className={`absolute top-[250px] right-[481px] w-[168px] h-[126px]`}>
+            <div
+              className={`absolute top-[250px] right-[481px] w-[168px] h-[126px]`}
+            >
               <div className={`relative w-full h-full`}>
-                <Image src={'/code-image.svg'} fill alt="img"/>
+                <Image src={"/code-image.svg"} fill alt="img" />
               </div>
             </div>
             {/* <BackImage image={'/code-image.svg'} size={{x: 168, y: 126}} position={{top: 250, left: 481}}/> */}
-            <div className={`absolute top-[41px] right-[225px] w-[170px] h-[103px]`}>
+            <div
+              className={`absolute top-[41px] right-[225px] w-[170px] h-[103px]`}
+            >
               <div className={`relative w-full h-full`}>
-                <Image src={'/pen-image.svg'} fill alt="img"/>
+                <Image src={"/pen-image.svg"} fill alt="img" />
               </div>
             </div>
             {/* <BackImage image={'/pen-image.svg'} size={{x: 170, y: 103}} position={{top: 41, left: 225}}/> */}
-            <div className={`absolute top-[144px] right-[63px] w-[162px] h-[136px]`}>
+            <div
+              className={`absolute top-[144px] right-[63px] w-[162px] h-[136px]`}
+            >
               <div className={`relative w-full h-full`}>
-                <Image src={'/bot-image.svg'} fill alt="img"/>
+                <Image src={"/bot-image.svg"} fill alt="img" />
               </div>
             </div>
             {/* <BackImage image={'/bot-image.svg'} size={{x: 162, y: 136}} position={{top: 144, left: 63}}/> */}
-            <div className={`absolute top-[404px] right-[35px] w-[192px] h-[136px]`}>
+            <div
+              className={`absolute top-[404px] right-[35px] w-[192px] h-[136px]`}
+            >
               <div className={`relative w-full h-full`}>
-                <Image src={'/doc-image.svg'} fill alt="img"/>
+                <Image src={"/doc-image.svg"} fill alt="img" />
               </div>
             </div>
             {/* <BackImage image={'/doc-image.svg'} size={{x: 192, y: 136}} position={{top: 404, left: 35}}/> */}
-            <div className={`absolute top-[410px] right-[431px] w-[122px] h-[122px]`}>
+            <div
+              className={`absolute top-[410px] right-[431px] w-[122px] h-[122px]`}
+            >
               <div className={`relative w-full h-full`}>
-                <Image src={'/api-image.svg'} fill alt="img"/>
+                <Image src={"/api-image.svg"} fill alt="img" />
               </div>
             </div>
             {/* <BackImage image={'/api-image.svg'} size={{x: 122, y: 122}} position={{top: 410, left: 431}}/> */}
-            <div className={`absolute top-[410px] right-[577px] w-[122px] h-[122px]`}>
+            <div
+              className={`absolute top-[410px] right-[577px] w-[122px] h-[122px]`}
+            >
               <div className={`relative w-full h-full`}>
-                <Image src={'/nft-image.svg'} fill alt="img"/>
+                <Image src={"/nft-image.svg"} fill alt="img" />
               </div>
             </div>
             {/* <BackImage image={'/nft-image.svg'} size={{x: 122, y: 122}} position={{top: 410, left: 577}}/> */}
 
             {/* тексты */}
 
-            {
-              labels.map(label => (
-                <div key={label.id} style={{top: `${label.position.top}px`, left: `${label.position.left}px`, transform: `rotate(${label.rotation}deg)`}} className={`contrast-label ${label.anglePosition} ${label.color}`}>
-                  {label.text}
-                </div>
-                // <ContarstLabel {...label}>{label.text}</ContarstLabel>
-              ))
-            }
+            {labels.map((label) => (
+              <div
+                key={label.id}
+                style={{
+                  top: `${label.position.top}px`,
+                  left: `${label.position.left}px`,
+                  transform: `rotate(${label.rotation}deg)`,
+                }}
+                className={`contrast-label ${label.anglePosition} ${label.color}`}
+              >
+                {label.text}
+              </div>
+              // <ContarstLabel {...label}>{label.text}</ContarstLabel>
+            ))}
           </div>
         </div>
         <div className="light rotate-[41.31deg] h-[290.29px] w-[871.27px] top-[138px] left-[-160px]">
           <div>
-            <Image src={'/light.png'} fill alt="light"/>
+            <Image src={"/light.png"} fill alt="light" />
           </div>
         </div>
         <div className="wrapper">
@@ -486,7 +518,7 @@ export default function Home() {
       <section id="services" className="max-w-screen overflow-clip relative">
         <div className="w-[398.65px] h-[458.54px] absolute top-[230px] right-[-194px] rotate-[-23.11deg]">
           <div className="relative w-full h-full">
-            <Image src={'/light-ellips.png'} alt="fon" fill objectFit="cover"/>
+            <Image src={"/light-ellips.png"} alt="fon" fill objectFit="cover" />
           </div>
         </div>
         <div className="wrapper">
@@ -526,7 +558,7 @@ export default function Home() {
             <Card>
               <div className="services-image p-0 w-[467.1px] absolute right-[27px] bottom-[37.35px]">
                 <div className="relative w-full aspect-[467.1/376.69]">
-                  <Image alt="fon" src={'/fon-services.svg'} fill/>
+                  <Image alt="fon" src={"/fon-services.svg"} fill />
                 </div>
               </div>
               <div className="services-info-card">
@@ -559,7 +591,7 @@ export default function Home() {
       <section id="why" className="relative">
         <div className="light rotate-[-31.04deg] top-[845px] left-[-223px] w-[723.89px] h-[441.19px]">
           <div>
-            <Image src={'/light2.png'} fill alt="light"/>
+            <Image src={"/light2.png"} fill alt="light" />
           </div>
         </div>
         <div className="wrapper">
@@ -571,7 +603,7 @@ export default function Home() {
             <Card>
               <div className="absolute top-[-40px] left-[-134px]">
                 <div className="w-[692px] h-[438px]">
-                  <Image src={'/why-fon-1.svg'} fill alt="fon"/>
+                  <Image src={"/why-fon-1.svg"} fill alt="fon" />
                 </div>
               </div>
               <div className="card-body justify-end">
@@ -586,12 +618,12 @@ export default function Home() {
             <div className="pt-[50px] discr max-w-[328px]">
               Проектирование, дизайн, frontend/backend. Вам не нужно искать
               отдельные команды — экономим ваше время и бюджет.
-              <RadialStar id={'why2star'} size={30}/>
+              <RadialStar id={"why2star"} size={30} />
             </div>
             <Card>
               <div className="absolute top-[160px] left-[74px]">
                 <div className="w-[208px] h-[222px]">
-                  <Image src={'/why-fon-2.svg'} fill alt="fon"/>
+                  <Image src={"/why-fon-2.svg"} fill alt="fon" />
                 </div>
               </div>
               <div className="card-body justify-start">
@@ -604,13 +636,13 @@ export default function Home() {
             </Card>
             <div className="pt-[186px] discr max-w-[166px]">
               Единый подрядчик для всех IT-задач.
-              <RhombusStar id={'why1star'} size={12.16}/>
-              <RhombusStar id={'why3star'} size={5.33} />
+              <RhombusStar id={"why1star"} size={12.16} />
+              <RhombusStar id={"why3star"} size={5.33} />
             </div>
             <Card>
               <div className="absolute top-[223px] left-[0]">
                 <div className="w-[374.5px] h-[308px]">
-                  <Image src={'/why-fon-3.svg'} fill alt="fon"/>
+                  <Image src={"/why-fon-3.svg"} fill alt="fon" />
                 </div>
               </div>
               <div className="card-body justify-start">
@@ -627,7 +659,7 @@ export default function Home() {
             <Card>
               <div className="absolute top-[170px] left-[-10.5px]">
                 <div className="w-[390px] h-[254px]">
-                  <Image src={'/why-fon-4.svg'} fill alt="fon"/>
+                  <Image src={"/why-fon-4.svg"} fill alt="fon" />
                 </div>
               </div>
               <div className="card-body justify-start">
@@ -703,14 +735,14 @@ export default function Home() {
       </section>
       <section id="trigger" className="overflow-clip">
         <div className="fon">
-          <RadialStar id={'trigger-1'} size={1}/>
-          <RadialStar id={'trigger-2'} size={3}/>
-          <RhombusStar id={'trigger-3'} size={5.33}/>
-          <RhombusStar id={'trigger-4'} size={7.86}/>
-          <RhombusStar id={'trigger-5'} size={7.86}/>
+          <RadialStar id={"trigger-1"} size={1} />
+          <RadialStar id={"trigger-2"} size={3} />
+          <RhombusStar id={"trigger-3"} size={5.33} />
+          <RhombusStar id={"trigger-4"} size={7.86} />
+          <RhombusStar id={"trigger-5"} size={7.86} />
           <div className="absolute top-[130px] left-[50%] translate-x-[-50%] z-[0]">
             <div className="relative w-[2022px] h-[596px]">
-              <Image src={'/trigger-section-fon.svg'} fill alt="fon"/>
+              <Image src={"/trigger-section-fon.svg"} fill alt="fon" />
             </div>
           </div>
         </div>

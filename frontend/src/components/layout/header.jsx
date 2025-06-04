@@ -44,7 +44,7 @@ export default function Header() {
             <SmallBorderButton onClick={handleContact}>
               Связаться
             </SmallBorderButton>
-            <button className="languages">
+            <button className="languages" onClick={handleChangeLanguage}>
               <div className="realtive w-[30px] h-[30px]">
                 <div className="absolute">
                   <Image

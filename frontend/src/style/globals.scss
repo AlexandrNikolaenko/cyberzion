@@ -29,6 +29,11 @@ body {
   color: var(--foreground);
 }
 
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -253,10 +258,13 @@ header {
 // стилизация первой секции
 
 #intro {
-  display: relative;
+  position: relative;
   padding-top: 97px;
   padding-bottom: 92px;
   background-color: var(--background-light);
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 
   .contrast-label {
     position: absolute;

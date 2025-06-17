@@ -174,7 +174,7 @@ export default function Home() {
   return (
     <main>
       <section id="intro">
-        <div className="absolute top-0 overflow-x-clip max-w-screen">
+        <div className="absolute top-0 overflow-x-clip max-w-[1440px]">
           <div className="relative w-full">
             <Image
               src={"/main-fon.png"}
@@ -184,7 +184,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="absolute top-[105px] right-[59px]">
+        <div className="absolute top-[20px] right-[59px]">
           <div className="relative w-[699px] h-[595px]">
             {/* <Image src={'/main-fon-motion.svg'} alt="fon" fill/> */}
 
@@ -293,7 +293,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="light rotate-[41.31deg] h-[290.29px] w-[871.27px] top-[138px] left-[-160px]">
+        <div className="light rotate-[41.31deg] h-[290.29px] w-[871.27px] top-[0px] left-[-160px]">
           <div>
             <Image src={"/light.png"} fill alt="light" />
           </div>
@@ -317,6 +317,174 @@ export default function Home() {
       </section>
       <section id="scroll-line">
         <ul>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
+          <li>
+            <Image
+              src={"/Company1.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+            <Image
+              src={"/Company1-gray.svg"}
+              alt="company"
+              width={127}
+              height={43}
+            />
+          </li>
           <li>
             <Image
               src={"/Company1.svg"}

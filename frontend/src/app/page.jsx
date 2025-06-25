@@ -684,12 +684,12 @@ export default function Home() {
         </ul>
       </section>
       <section id="services" className="max-w-screen overflow-clip relative">
-        <div className="w-[398.65px] h-[458.54px] absolute top-[230px] right-[-194px] rotate-[-23.11deg]">
-          <div className="relative w-full h-full">
-            <Image src={"/light-ellips.png"} alt="fon" fill objectFit="cover" />
-          </div>
-        </div>
         <div className="wrapper">
+          <div className="w-[398.65px] h-[458.54px] absolute top-[230px] right-[-394px] rotate-[-23.11deg]">
+            <div className="relative w-full h-full">
+              <Image src={"/light-ellips.png"} alt="fon" fill objectFit="cover" />
+            </div>
+          </div>
           <div id="title">
             <AccentPoint>Наши услуги</AccentPoint>
             <h2>
@@ -757,12 +757,12 @@ export default function Home() {
         </div>
       </section>
       <section id="why" className="relative">
-        <div className="light rotate-[-31.04deg] top-[845px] left-[-223px] w-[723.89px] h-[441.19px]">
-          <div>
-            <Image src={"/light2.png"} fill alt="light" />
-          </div>
-        </div>
         <div className="wrapper">
+          <div className="light rotate-[-31.04deg] top-[845px] left-[-423px] w-[723.89px] h-[441.19px]">
+            <div>
+              <Image src={"/light2.png"} fill alt="light" />
+            </div>
+          </div>
           <div id="why-title">
             <AccentPoint>Почему мы</AccentPoint>
             <h2>Ключевые преимущества выбора нашей команды разработчиков</h2>

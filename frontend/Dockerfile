@@ -4,7 +4,6 @@ WORKDIR '/usr/app'
 COPY package.json package.json
 RUN npm install
 COPY . .
-RUN npm run build
+RUN npm run deploy
 
-EXPOSE 85
-CMD [ "npm", "start" ]
+EXPOSE 80

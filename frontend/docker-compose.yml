@@ -5,6 +5,6 @@ services:
   frontend:
     build: .
     ports:
-      - "85:85"
+      - "80:80"
     networks:
       - prod

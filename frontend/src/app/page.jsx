@@ -295,7 +295,7 @@ export default function Home() {
         </div>
         <div className="light rotate-[41.31deg] h-[290.29px] w-[871.27px] top-[0px] left-[-160px]">
           <div>
-            <Image src={"/light.png"} fill alt="light" />
+            <Image src={"/light.png"} style={{color: 'inherit'}} fill alt="light" />
           </div>
         </div>
         <div className="wrapper">

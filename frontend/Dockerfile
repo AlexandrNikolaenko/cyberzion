@@ -4,7 +4,7 @@ WORKDIR '/usr/app'
 COPY package.json package.json
 RUN npm install
 COPY . .
-ENV CLOUDFLARE_API_TOKEN=<твой_токен>
-RUN npm run deploy
+RUN npm run build
 
 EXPOSE 80
+CMD [ "npm", "start" ]
